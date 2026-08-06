@@ -1,6 +1,6 @@
 {
-    "name": "receiptiq",
-    "short_name": "receiptiq",
+    "name": "intellireceipt",
+    "short_name": "intellireceipt",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
