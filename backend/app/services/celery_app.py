@@ -18,5 +18,7 @@ celery_app.conf.update(
     enable_utc=True,
 )
 
-# Phase 2 will register OCR/AI extraction tasks here, e.g.:
-# celery_app.autodiscover_tasks(["app.services.ocr_tasks"])
+# Import task modules so they register with this Celery app. Direct import
+# (rather than autodiscover_tasks, which expects a Django-style app
+# registry) keeps this explicit and avoids import-order surprises.
+from app.services import receipt_tasks  # noqa: E402,F401

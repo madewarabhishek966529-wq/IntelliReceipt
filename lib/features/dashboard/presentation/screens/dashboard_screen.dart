@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import '../../../auth/presentation/providers/auth_providers.dart';
 
 /// Temporary placeholder so routing/auth can be exercised end-to-end in
@@ -20,8 +21,23 @@ class DashboardScreen extends ConsumerWidget {
           ),
         ],
       ),
-      body: const Center(
-        child: Text('Dashboard coming in Phase 5'),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => context.push('/scan'),
+        icon: const Icon(Icons.add_a_photo_outlined),
+        label: const Text('Scan'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('Dashboard coming in Phase 5'),
+            const SizedBox(height: 16),
+            OutlinedButton(
+              onPressed: () => context.push('/receipts'),
+              child: const Text('View receipts'),
+            ),
+          ],
+        ),
       ),
     );
   }

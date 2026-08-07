@@ -1,0 +1,6 @@
+[
+  "tests/test_ai_extraction_service.py::test_extract_parses_well_formed_json",
+  "tests/test_ai_extraction_service.py::test_extract_raises_parse_error_on_malformed_json",
+  "tests/test_ai_extraction_service.py::test_extract_raises_parse_error_on_schema_mismatch",
+  "tests/test_ai_extraction_service.py::test_extract_returns_empty_receipt_for_blank_input"
+]
